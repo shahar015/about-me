@@ -34,7 +34,7 @@ export default function Contact() {
           className="flex items-center justify-center mb-12"
         >
           <a
-            href="mailto:hello@example.com"
+            href="mailto:shahar0151@gmail.com"
             className="group flex items-center gap-2 px-6 py-3 rounded-lg bg-neon-cyan/10 border border-neon-cyan/30 text-neon-cyan font-medium text-sm hover:bg-neon-cyan/20 hover:border-neon-cyan/50 transition-all duration-300 hover:glow-cyan"
           >
             <Mail size={16} />

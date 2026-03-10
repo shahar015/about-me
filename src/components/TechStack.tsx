@@ -5,7 +5,7 @@ import {
   Server,
   Layout,
   Braces,
-  Cpu,
+  Container,
 } from 'lucide-react'
 
 const technologies = [
@@ -17,8 +17,8 @@ const technologies = [
   { name: 'Tailwind CSS', icon: Layout, color: '#06b6d4' },
   { name: 'PostgreSQL', icon: Database, color: '#4169e1' },
   { name: 'Kysely', icon: Database, color: '#00f0ff' },
-  { name: 'COBOL', icon: Cpu, color: '#a855f7' },
-  { name: 'AS/400', icon: Server, color: '#f472b6' },
+  { name: 'Nx / Turborepo', icon: Server, color: '#a855f7' },
+  { name: 'DevOps', icon: Container, color: '#f472b6' },
 ]
 
 const container = {
@@ -50,7 +50,7 @@ export default function TechStack() {
           <p className="text-slate-400 max-w-xl mx-auto">
             A strong advocate for query builders and raw control over heavy ORMs.
             Experienced across the full spectrum — from modern TypeScript stacks
-            to maintaining and modernizing legacy systems.
+            to CI/CD pipelines, containerization, and monorepo tooling.
           </p>
         </motion.div>
 

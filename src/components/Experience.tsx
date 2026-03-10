@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Briefcase, GraduationCap, Users, Wrench } from 'lucide-react'
+import { Briefcase, Users, Wrench } from 'lucide-react'
 
 const experiences = [
   {
@@ -28,15 +28,6 @@ const experiences = [
     description:
       'Oversaw the development of internal tools built to streamline operations across the agency. Focused on end-to-end type safety, performance, and maintainability — ensuring every system was built to last.',
     highlights: ['Type-Safe APIs', 'Performance', 'Maintainability'],
-  },
-  {
-    icon: GraduationCap,
-    title: 'Legacy Systems Modernization',
-    org: 'Enterprise',
-    period: 'Ongoing',
-    description:
-      'Maintained and modernized versatile legacy systems including COBOL and AS/400 environments. Bridged the gap between decades-old infrastructure and modern development practices, ensuring continuity while enabling innovation.',
-    highlights: ['COBOL', 'AS/400', 'System Migration'],
   },
 ]
 
