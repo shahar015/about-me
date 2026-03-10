@@ -1,94 +1,64 @@
 @import "tailwindcss";
 
 @theme {
-  --color-accent: #00e5ff;
-  --color-accent-dim: #00e5ff33;
-  --color-accent-muted: #00e5ff18;
-  --color-accent-glow: #00e5ff12;
-  --color-warm: #ff6b35;
-  --color-surface-0: #050507;
-  --color-surface-1: #0a0a0e;
-  --color-surface-2: #101016;
-  --color-surface-3: #16161e;
-  --color-surface-4: #1e1e28;
-  --color-surface-5: #282834;
-  --color-border: #ffffff0a;
-  --color-border-hover: #ffffff14;
-  --color-text-primary: #ededf0;
-  --color-text-secondary: #8b8b9e;
-  --color-text-tertiary: #55556a;
-  --font-display: "Syne", ui-sans-serif, system-ui, sans-serif;
-  --font-body: "Outfit", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "Fira Code", ui-monospace, monospace;
+  --color-neon-cyan: #00f0ff;
+  --color-neon-purple: #a855f7;
+  --color-neon-pink: #f472b6;
+  --color-neon-green: #34d399;
+  --color-dark-900: #0a0a0f;
+  --color-dark-800: #12121a;
+  --color-dark-700: #1a1a2e;
+  --color-dark-600: #252540;
+  --color-dark-500: #2f2f4a;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
 
 @layer base {
   * {
     scrollbar-width: thin;
-    scrollbar-color: var(--color-surface-4) transparent;
+    scrollbar-color: var(--color-dark-600) transparent;
   }
 
   html {
     scroll-behavior: smooth;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
   }
 
   body {
-    background-color: var(--color-surface-0);
-    color: var(--color-text-primary);
-    font-family: var(--font-body);
+    background-color: var(--color-dark-900);
+    color: #e2e8f0;
+    font-family: var(--font-sans);
     overflow-x: hidden;
     margin: 0;
   }
 
   ::selection {
-    background-color: var(--color-accent-dim);
+    background-color: color-mix(in srgb, var(--color-neon-cyan) 30%, transparent);
     color: #fff;
   }
 }
 
 @layer utilities {
-  .text-gradient-accent {
-    background: linear-gradient(135deg, var(--color-accent) 0%, #7c3aed 100%);
+  .text-gradient {
+    background: linear-gradient(135deg, var(--color-neon-cyan), var(--color-neon-purple));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
-  .noise-overlay {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 9999;
-    opacity: 0.025;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-    background-repeat: repeat;
-    background-size: 256px 256px;
+  .glow-cyan {
+    box-shadow: 0 0 20px color-mix(in srgb, var(--color-neon-cyan) 20%, transparent),
+                0 0 60px color-mix(in srgb, var(--color-neon-cyan) 10%, transparent);
   }
 
-  .card-surface {
-    background: linear-gradient(
-      135deg,
-      color-mix(in srgb, var(--color-surface-2) 80%, transparent) 0%,
-      color-mix(in srgb, var(--color-surface-3) 60%, transparent) 100%
-    );
-    border: 1px solid var(--color-border);
-    backdrop-filter: blur(20px);
+  .glow-purple {
+    box-shadow: 0 0 20px color-mix(in srgb, var(--color-neon-purple) 20%, transparent),
+                0 0 60px color-mix(in srgb, var(--color-neon-purple) 10%, transparent);
   }
 
-  .card-surface:hover {
-    border-color: var(--color-border-hover);
-  }
-
-  .glow-accent {
-    box-shadow:
-      0 0 30px var(--color-accent-glow),
-      0 0 80px color-mix(in srgb, var(--color-accent) 5%, transparent);
-  }
-
-  .line-accent {
-    height: 1px;
-    background: linear-gradient(90deg, var(--color-accent), transparent);
+  .glass {
+    background: color-mix(in srgb, var(--color-dark-700) 60%, transparent);
+    backdrop-filter: blur(12px);
+    border: 1px solid color-mix(in srgb, var(--color-neon-cyan) 10%, transparent);
   }
 }

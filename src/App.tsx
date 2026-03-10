@@ -4,13 +4,12 @@ import Experience from './components/Experience'
 import Projects from './components/Projects'
 import TechStack from './components/TechStack'
 import Contact from './components/Contact'
-import GridBackground from './components/GridBackground'
+import ParticleField from './components/ParticleField'
 
 function App() {
   return (
     <div className="relative min-h-screen">
-      <div className="noise-overlay" />
-      <GridBackground />
+      <ParticleField />
       <Navbar />
       <main>
         <Hero />
