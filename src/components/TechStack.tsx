@@ -6,6 +6,7 @@ import {
   Layout,
   Braces,
   Container,
+  FolderTree,
 } from 'lucide-react'
 
 const technologies = [
@@ -17,7 +18,7 @@ const technologies = [
   { name: 'Tailwind CSS', icon: Layout, color: '#06b6d4' },
   { name: 'PostgreSQL', icon: Database, color: '#4169e1' },
   { name: 'Kysely', icon: Database, color: '#00f0ff' },
-  { name: 'Nx / Turborepo', icon: Server, color: '#a855f7' },
+  { name: 'Nx / Turborepo', icon: FolderTree, color: '#a855f7' },
   { name: 'DevOps', icon: Container, color: '#f472b6' },
 ]
 
